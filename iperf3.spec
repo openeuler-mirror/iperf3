@@ -1,12 +1,13 @@
 Name:           iperf3
 Version:        3.6
-Release:        4
+Release:        5
 Summary:        TCP,UDP,and SCTP network bandwidth measurement tool
 License:        BSD
 URL:            http://github.com/esnet/iperf
 Source0:        http://downloads.es.net/pub/iperf/iperf-%{version}.tar.gz
 
 BuildRequires:  libuuid-devel gcc
+Requires:       %{name}-help = %{version}-%{release}
 
 %description
 Iperf is a tool for active measurements of the maximum achievable bandwidth
@@ -53,5 +54,8 @@ mkdir -p %{buildroot}%{_mandir}/man1
 %{_mandir}/man3/libiperf.3.gz
 
 %changelog
+* Fri Nov 06 2020 leiju <leiju4@huawei.com> - 3.6-5
+- Add Requires iperf3-help into iperf3
+
 * Tue Nov 26 2019 openEuler Buildteam <buildteam@openeuler.org> - 3.6-4
 - Package init
