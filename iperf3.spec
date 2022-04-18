@@ -1,6 +1,6 @@
 Name:           iperf3
-Version:        3.6
-Release:        4
+Version:        3.10.1
+Release:        1
 Summary:        TCP,UDP,and SCTP network bandwidth measurement tool
 License:        BSD
 URL:            http://github.com/esnet/iperf
@@ -37,7 +37,7 @@ mkdir -p %{buildroot}%{_mandir}/man1
 
 %files
 %defattr(-,root,root)
-%doc README.md RELEASE_NOTES
+%doc README.md RELNOTES.md
 %license LICENSE _esnet/LICENSE
 %{_bindir}/iperf3
 %{_libdir}/*.so.*
@@ -53,5 +53,8 @@ mkdir -p %{buildroot}%{_mandir}/man1
 %{_mandir}/man3/libiperf.3.gz
 
 %changelog
+* Tue Jan 4 2022 liyanan <liyanan32@huawei.com> - 3.10.1-1
+- Upgrade to 3.10.1
+
 * Tue Nov 26 2019 openEuler Buildteam <buildteam@openeuler.org> - 3.6-4
 - Package init
